@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+/* home section */ 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 2rem 9%;
+    background: #1f242d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 4px solid #080808;
+}
+
+.logo{
+    font-size: 2.5rem ;
+    font-weight: 600;
+    cursor: default;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.logo .design{
+    font-size: 4rem;
+    color: crimson;
+}
+
+.navbar-one a{
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.navbar-one a:hover,.navbar-two .button:hover,
+.navbar-one a.active,.navbar-two .button.active{
+    color: crimson;
+    border-bottom: 2px solid crimson;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 3.8rem;
+    font-weight: 200;
+}
+
+.name{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: crimson;
+}
+
+.profession{
+    color: rgb(20, 220, 20);
+    position: relative;
+    font-size: 2.4rem;
+}
+
+.home-image img{
+    width: 100%; 
+    height: 70vh; 
+}
+
+.home-image{
+    width:60vh;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 60px crimson,
+                0 0 60px crimson,
+                0 0 60px crimson;
+
+    overflow: hidden;
+    margin-left: 270px;
+}
+
+.home-image:hover{
+    box-shadow: 0 0 80px crimson,
+                0 0 80px crimson,
+                0 0 80px crimson;
+}
+
+.social-media i{
+    display: inline;
+    font-size: 2.6rem;
+    margin: 28px;
+    line-height: 3.3;
+    padding: 10px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: crimson;
+    border: 2px solid crimson;
+}
+
+.social-media i:hover{
+    background-color: crimson;
+    color:#fff;
+    box-shadow: 0 0 40px crimson,
+                0 0 40px crimson,
+                0 0 40px crimson;
+}
+
+#facebook{
+    margin-left: 0;
+}
+
+.btn1,.btn2,.btn3{
+    padding:10px 30px;
+    border-radius: 15px;
+    background-color: crimson;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    box-shadow: 0 0 50px crimson,
+                0 0 50px crimson,
+                0 0 50px crimson;
+    font-weight: 700;
+}
+
+/* about section */
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.about-image img{
+    width: 100%; 
+    height: 70vh; 
+}
+
+.about-image{
+    width:100vh;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 60px crimson,
+                0 0 60px crimson,
+                0 0 60px crimson;
+
+    overflow: hidden;
+}
+
+.about-me .about{
+    font-size: 4.5rem;
+}
+
+.about .heading,.edu{
+    color: crimson;
+}
+
+.about-me p{
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn2{
+    margin-top: 15px;
+}
+.pri{
+    display: none;
+}
+
+.edu{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 25px 22px;
+    margin-top: 50px;
+}
+
+.navbar-two{
+    background-color: #080808;
+    padding: 21px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navbar-two h1{
+    font-size: 1.8rem;
+    display: inline;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 50px;
+    cursor: pointer; 
+}
+
+.tab{
+    margin-left: 52px;
+    margin-top: 40px;
+    display: none;
+}
+
+.tab li{
+    font-size: 1.9rem;
+}
+
+.tab.active{
+    display: block;
+}
+
+/*skills section */
+.skills-h{
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-heading1{
+    font-size: 2.5rem;
+    margin-bottom: 11px;
+}
+
+.bar{
+    font-size: 23px;
+    margin-top: 11px;
+}
+
+.container1{
+    width: 400px;
+    height: 500px;
+    padding: 1px 80px;
+}
+.container2{
+    margin-left: 220px;   
+}
+
+.technical-bars .bar:first-child{
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 170%;
+    height: 5px;
+    background-color: rgb(20, 220, 20);
+    animation: animate 1s cubic-bezier(1,0,0.5,1)forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: crimson;
+    position: absolute;
+    border-radius: 10px; 
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1)forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span{
+    width: 90%;
+}
+
+.progress-line.css span{
+    width: 50%;
+}
+
+.progress-line.javascript span{
+    width: 70%;
+}
+
+.progress-line.python span{
+    width: 50%;
+}
+
+.progress-line.mysql span{
+    width: 90%;
+}
+
+.progress-line.php span{
+    width: 40%;
+}
+
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: aqua;
+    color: #000;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "50%";
+}
+.progress-line.javascript span::after{
+    content: "70%";
+}
+.progress-line.python span::after{
+    content: "50%";
+}
+.progress-line.mysql span::after{
+    content: "90%";
+}
+.progress-line.php span::after{
+    content: "40%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: aqua;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.chart{
+    background-color: aqua;
+    border-radius: 10px;
+    width: 470px;
+    height: 300px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* project section */
+.project-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(370px,auto));
+}
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 70px;
+}
+.pro-img{
+    border-radius: 20px;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.9),rgb(20, 220, 20));
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layer h5{
+    color: aqua;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.layer p{
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.layer i{
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ff004f;
+    border-radius: 50%;
+}
+.row:hover img{
+    transform: scale(1.1);
+}
+.row:hover .layer{
+    height: 100%;
+}
+
+/* contract section */
+.contact h1{
+    margin-bottom: 2.5rem;
+}
+.contact form{
+    max-width: 65rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background-color: #1f242d;
+    color: #fff;
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .bt:hover{
+    background-color: #ff004f;
+}
+.footer{
+    bottom: 0;
+    width:100%;
+    padding: 0.8rem 9%;
+    background: #1f242d;
+}
+.footer .fa-solid{
+    color: aqua;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.footer font{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    
+}
+.footer .email{
+    margin-right: 50px;
+}
+
+.footer .bx{
+    color: #fff;
+    background-color: #ff004f;
+    font-size: 3rem;
+    margin-left: 609px;
+}
