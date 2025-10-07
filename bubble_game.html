@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>bubble game</title>
+		<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+			font-family:'poppins', sans-serif;
+		}
+		html,body{
+			height:100%;
+			width:100%;
+		}
+		#main{
+			width:100%;
+			height:100%;
+			background-color:rgba(255, 99, 71, 0.5);
+			display:flex;
+			align-items:center;
+			justify-content:center;
+		}
+		#panel{
+			width:85%;
+			height:85%;
+			background-color:white;
+			border-radius:10px;
+			overflow:hidden;
+		}
+		#tpanel{
+			padding:0px 20%;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			height:100px;
+			width:100%;
+			background-color:rgb(255, 99, 71);
+		}
+		.elem{
+			display:flex;
+			margin-left:50px;
+			gap:18px;
+			align-items:center;
+		}
+		.box{
+			padding:10px 15px;
+			background-color:white;
+			border-radius:5px;
+			color:blue;
+			font-weight:bold;
+			font-size:18px;
+		}
+		#bpanel{
+			width:100%;
+			height:100%;
+			padding:10px 20px;
+			display:flex;
+			
+			gap:10px;
+			flex-wrap:wrap;
+			justify-content:center;
+			align-items:center;
+		}
+		.ball{
+			width:60px;
+			height:60px;
+			background-color:blue;
+			border-radius:50%;
+			color:white;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			font-weight:bold;
+			font-size:18px;
+		}
+		.ball:hover{
+			cursor:pointer;
+			background-color:DodgerBlue;
+		}
+		h1{
+			margin-bottom:150px;
+			font-size:30px;
+			
+		}
+		span{
+			font-size:70px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="panel">
+				<div id="tpanel">
+					<div class="elem">
+						<h3>Hit</h3>
+						<div id="hit" class="box">4</div>
+					</div>
+					<div class="elem">
+						<h3>Timer</h3>
+						<div id="timerval" class="box">60</div>
+					</div>
+					<div class="elem">
+						<h3>Score</h3>
+						<div id="score" class="box">0</div>
+					</div>
+				</div>
+				<div id="bpanel">
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script>
+			let hit = 0;
+			let timer = 60;
+			let score = 0;
+			
+			function ballCreate(){
+				let clutter = "";
+				
+				for(let i = 1; i <= 90; i++){
+					let rn = Math.floor(Math.random() * 10)
+					clutter += `<div class="ball">${rn}</div>`;
+				}
+				document.querySelector("#bpanel").innerHTML = clutter;
+			}
+			
+			function runTimer(){
+				let timerInt = setInterval(function(){
+					if(timer > 0){
+						timer--;
+						document.querySelector("#timerval").textContent = timer;
+					}
+					else{
+						clearInterval(timerInt);
+						let over =`<h1><span>game over</span><br>your score is: ${score}</h1>`
+						document.querySelector("#bpanel").innerHTML = over;
+					}
+				},1000);
+			}
+			
+			function hitBall(){
+				hit = Math.floor(Math.random() * 10)
+				document.querySelector("#hit").textContent = hit;
+			}
+			
+				document.querySelector("#bpanel").addEventListener("click",function(dets){
+					let num = Number(dets.target.textContent);
+					console.log(num);
+					console.log(hit);
+					if(num === hit){
+						score +=10;
+						document.querySelector("#score").textContent = score;
+						hitBall();
+						ballCreate();
+					}
+				})
+			
+			ballCreate();
+			runTimer();
+			hitBall();	
+</script>
